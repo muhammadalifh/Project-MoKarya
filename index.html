@@ -16,12 +16,19 @@
 
         <!--My css-->
         <link href="src/css/index.css" rel="stylesheet">   
+        <link rel="stylesheet" type="text/css" href="src/css/style.css"/>
+
+        <!--Swiper.js-->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
+
         
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
+        
     </head>
     <body>
         <!--NavBar-->
@@ -41,29 +48,124 @@
           </ul>
         </div>
       </nav>
-
+      
       <header class="pagehead">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-sm-4">
-                <img src="src/img/work.png" id="vector1" class="fadeInLeft">
-            </div>
-            <div class="col-sm-8 text-right">
-              <h1 class="font-weight-semibold ml3 fadeInDown"> MoKarya</h1>
-              <p class="lead fadeInRight">Website Resmi Hasil Karya Mahasiswa Program Studi <br> D4 Manajemen Informatika </p>
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="startbtn">
-                Upload Karya
-              </button>
-              <div class="w-100"></div>
-              <button type="button" class="btn btn-primary" onclick="scrollWin(0,780)" id="startbtn2">
-                Lihat Gallery &#187
-              </button>
+        <div class="content h-100">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <table class="table-sm">
+                <tbody>
+                  <tr>
+                    <table class="table-sm mx-auto ">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img src="src/img/work.png" id="vector1" class="fadeInLeft img-fluid">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </tr>
+                  <tr class="spacer">
+  
+                  </tr>
+                  <tr>
+                    <table class="table-sm mx-auto">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <h1 class="font-weight-semibold ml3 fadeInDown"> MoKarya</h1>
+                            <p class="lead fadeInRight">Website Resmi Hasil Karya Mahasiswa Program Studi <br> D4 Manajemen Informatika </p>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="startbtn">
+                              Upload Karya
+                            </button>
+                            <div class="w-100"></div>
+                            <button type="button" class="btn btn-primary" onclick="scrollWin(0,780)" id="startbtn2">
+                              Lihat Gallery &#187
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </header>
-     
       
+      <div class="jumbotron gallery">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Title 1</div> <!--nth-child(start from 4)--> <!--sliderPerView+1-->
+            <div class="swiper-slide">Title 2</div>
+            <div class="swiper-slide">Title 3</div> <!--add link to specific page later-->
+            <div class="swiper-slide">Title 4</div>
+            <div class="swiper-slide">Title 5</div>
+            <div class="swiper-slide">Title 6</div>
+            <div class="swiper-slide">Title 7</div>
+            <div class="swiper-slide">Title 8</div>
+            <div class="swiper-slide">Title 9</div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+       
+      </div>
+    
+      
+      <div class="jumbotron footer" style="width: 100%; margin: 0">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
 
+                    <h5 class="text-uppercase">Tentang Kami</h5>
+                    <hr style="border-top: 1px solid white;">
+                    <p>Website ini dibuat dengan tujuan memenuhi tugas mata kuliah Pemograman Web Lanjutan</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">Tim Kami</h5>
+                    <hr style="border-top: 1px solid white;">
+                    <ul class="list-unstyled" style="color: #ffffff;">
+                        <li>
+                            Ariq Fachry R         
+                        </li>
+                        <li>
+                            Deni Eka Aji J R   
+                        </li>
+                        <li>
+                            M. Alif Hidayatullah  
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+         var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+      </script>
     </body>
+    
 </html>
